@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<link rel="stylesheet" href="app.css" type="text/css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Nezuko ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Background Hearts Container -->
+    <div id="hearts-container"></div>
+
+    <div class="letter-container">
+        <!-- Screen 1: The Envelope -->
+        <div id="screen-1" class="screen active">
+            <h1>Hey Nezuko... ✨</h1>
+            <p>I have something very special for you. Take a deep breath and click the button below.</p>
+            <button class="cute-btn" onclick="nextScreen(1)">Open The Letter 💌</button>
+        </div>
+
+        <!-- Screen 2: The Confession -->
+        <div id="screen-2" class="screen">
+            <h2>You are magical...</h2>
+            <p class="typing-text">Jab se maine tumhe dekha hai, meri duniya ka rang badal gaya hai. You are the reason behind my stupid smiles and my happy days.</p>
+            <p class="hidden-text delay-1">Har din tumhare baare mein sochta hoon...</p>
+            <p class="hidden-text delay-2">Aur har raat tumhare khwabon mein khona chahta hoon.</p>
+            <button class="cute-btn hidden-btn" onclick="nextScreen(2)">Wait, there's more... 🥺</button>
+        </div>
+
+        <!-- Screen 3: Interactive Question -->
+        <div id="screen-3" class="screen">
+            <h2>Ek chota sa sawal hai...</h2>
+            <p>Do you know how much I love you?</p>
+            <div class="options-container">
+                <button class="option-btn" onclick="wrongAnswer()">Just a little bit 🤏</button>
+                <button class="option-btn" onclick="wrongAnswer()">A normal amount 😐</button>
+                <button class="option-btn correct-btn" onclick="rightAnswer()">To the moon and back 🌙</button>
+            </div>
+            <p id="feedback-text" class="feedback"></p>
+            <button id="proceed-btn" class="cute-btn hidden" onclick="nextScreen(3)">Click here 💖</button>
+        </div>
+
+        <!-- Screen 4: The Proposal (with GIF 1) -->
+        <div id="screen-4" class="screen">
+            <img src="1.gif" alt="Cute romantic gif" class="love-gif">
+            <h2>So, Nezuko...</h2>
+            <p>Zindagi bahut lambi hai, aur main ise akele nahi jeena chahta. Will you hold my hand forever?</p>
+            <div class="proposal-buttons">
+                <button id="btn-yes" class="cute-btn pulse" onclick="finalScreen()">YES! Of course! 🥰</button>
+                <button id="btn-no" class="cute-btn run-away">No 😢</button>
+            </div>
+        </div>
+
+        <!-- Screen 5: The Celebration (with GIF 2) -->
+        <div id="screen-5" class="screen">
+            <img src="2.gif" alt="Happy dancing gif" class="love-gif">
+            <h1 class="glow-text">YAYYYY! 🎉❤️</h1>
+            <p>Thank you for making me the happiest boy alive, Nezuko. I promise to cherish you, annoy you, and love you forever.</p>
+            <p class="signature">Yours forever,<br><b>Jagannath</b> ♾️</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
